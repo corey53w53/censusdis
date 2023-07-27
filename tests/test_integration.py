@@ -70,7 +70,6 @@ class DownloadTestCase(unittest.TestCase):
 
         self.assertEqual(["STATE", "COUNTY", "NAME", "B19001_001E"], list(df.columns))
 
-
     def test_bad_variable(self):
         """Try to download a variable that does not exist."""
 
