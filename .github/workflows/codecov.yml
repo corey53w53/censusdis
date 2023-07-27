@@ -2,7 +2,7 @@ name: codecov
 
 on: [push, pull_request, workflow_dispatch]
 jobs:
-  unit-test:
+  codecov:
     runs-on: ubuntu-latest
     steps:
       #----------------------------------------------
@@ -52,7 +52,7 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Run tests and collect coverage
-        run: poetry run pytest --cov=censusdis
+        run: poetry run pytest --cov tests
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
